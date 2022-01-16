@@ -16,87 +16,162 @@
 <body>
     <section>
         <!-- header -->
-        <div class=" w3-section head">
-            <h1 class=" w3-animate-top w3-center ">
+        <div class=" w3-section head ">
+            <h1 class=" w3-animate-opacity w3-center ">
                 <span class="w3-tag w3-jumbo ">N</span>
                 <span class="w3-tag w3-jumbo w3-white">E</span>
                 <span class="w3-tag w3-jumbo">X</span>
                 <span class="w3-tag w3-jumbo w3-white">T</span>
             </h1>
-            <h1 class="w3-animate-zoom w3-center ">
+            <h1 class="w3-animate-opacity w3-center ">
                 <span class=" w3-tag w3-jumbo ">G</span>
                 <span class="w3-tag w3-jumbo w3-white ">E</span>
                 <span class="w3-tag w3-jumbo ">N</span>
             </h1>
         </div>
-        <hr class="w3-border w3-padding w3-black">
+        <hr class=" w3-padding w3-black">
 
         <div class="w3-section w3-bar w3-center ">
-            <a href="home.html" class="page w3-button w3-mobile w3-wide w3-round-large w3-hover-blue w3-hover-shadow">Home</a>
-            <a href="our service.html" class="page w3-button w3-mobile w3-wide w3-round-large w3-hover-blue w3-hover-shadow">our services</a>
-            <a href="contact us.html" class="page w3-button w3-mobile w3-wide w3-round-large w3-hover-blue w3-hover-shadow">Contact Us</a>
+            <a href="home.html"
+                class="w3-large w3-button w3-mobile w3-wide w3-round-large w3-hover-blue w3-hover-shadow">Home</a>
+            <a href="our service.html"
+                class=" w3-large w3-button w3-mobile w3-wide w3-round-large w3-hover-blue w3-hover-shadow">our
+                services</a>
+            <a href="contact us.html"
+                class="w3-large w3-button w3-mobile w3-wide w3-round-large w3-hover-blue w3-hover-shadow">Contact Us</a>
         </div>
     </section>
     <!-- end of header -->
-    <!-- start of register -->
-    <div class="w3-card-4">
+    <!-- start of register  -->
+    <div class="w3-card-4 w3-center w3-margin w3-light-gray  w3-padding-24">
 
-        <div class="w3-container w3-green">
-            <h2 class="w3-center">Registeration</h2>
+        <div class="w3-container w3-mobile w3-text-indigo ">
+            <p class="w3-center">Register in our news peaper to resieve offers</p>
         </div>
+        <!-- the form -->
+        <form class="w3-container w3-center myform" method="post">
 
-        <form class="w3-container">
+            <div class="w3-row w3-section w3-margin">
+                <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+                <div class="w3-rest">
+                    <input required class="w3-input w3-border" id="yname" name="first" type="text" placeholder="Name">
+                </div>
+            </div>
 
-            <label class="w3-text-blue">First Name</label>
-            <input class="w3-input w3-border w3-animate-input w3-hover-blue" style="width: 30%;" type="text">
+            <div class="w3-row w3-section w3-margin">
+                <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+                <div class="w3-rest">
+                    <input required class="w3-input w3-border" name="email" type="email" placeholder="Email">
+                </div>
+            </div>
 
-            <label class="w3-text-blue">Last Name</label>
-            <input class="w3-input w3-border w3-animate-input w3-hover-blue" style="width: 30%;" type="text">
-
-            <label class="w3-text-blue">Email</label>
-            <input class=" w3-input w3-border w3-animate-input w3-hover-blue" style="width: 30%;" type="email">
-
-            <input class="w3-radio" type="radio" name="age" value="adult" checked>
+            <input class="w3-radio w3-center " id="old" type="radio" name="age" value="adult" >
             <label>older than 21</label>
 
-            <input class="w3-radio" type="radio" name="age" value="underage">
-            <label>less than 21</label>
+            <input class="w3-radio w3-center" id="yuong" type="radio" name="age" value="underage">
+            <label>younger than 21</label>
 
-            <select class="w3-select w3-border" name="option">
+            <select class="w3-select w3-margin" id="passion" onchange="run()" name="op">
                 <option value="" disabled selected>what are you intersted in ?</option>
                 <option value="1">phones</option>
                 <option value="2">laptops</option>
                 <option value="3">computers</option>
-                <option value="3">accessories</option>
+                <option value="4">accessories</option>
             </select>
 
-            <button class="w3-btn w3-blue" onclick="document.getElementById('id01').style.display='block'">Register
-            </button>
-            
+            <button class="w3-button w3-blue w3-center" id="myBtn">Register</button>
 
         </form>
 
-    </div>
-    <!-- end of register -->
-    <!-- test -->
-    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-blue">Register</button>
 
-  <div id="id01" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-teal"> 
-        <span onclick="document.getElementById('id01').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h4> your intersted in : <I></I></h4>
-      </header>
-      <div class="w3-container">
-        <p><a class="w3-btn" href="home.html">to Home</a></p>
-        <p><a class="w3-btn" href="our service.html">to services</a></p>
-      </div>
-      
-    </div>
-  </div>
-    <!-- end test -->
-    
+        </di>
+        <!-- end of register -->
+
+        <!-- test -->
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content  w3-center w3-card w3-round">
+                <span class="close w3-text-red">&times;</span>
+                <div class="w3-bar w3-container  ">
+                    <a href="home.html"
+                        class=" w3-medium w3-margin w3-center w3-button w3-blue w3-round w3-hover-gray w3-hover-shadow">Go
+                        Home</a>
+                    <a href="our service.html"
+                        class=" w3-medium w3-margin w3-center w3-button w3-blue w3-round w3-hover-gray w3-hover-shadow">
+                        See OurProducts</a>
+
+                </div>
+                <!-- test to what element i can get : -->
+                <p id="showtext2"></p>
+                <p id="showtext"> </p>
+                
+            </div>
+
+        </div>
+        <!-- my inner js-->
+        <script>
+            /////////// still in progress :
+
+            // deal with the select menu when somthing is been chosen:
+            function run() {
+                // get the select tag.
+                var fav = document.getElementById("passion");
+                // get the selected text
+                var strUser = fav.options[fav.selectedIndex].text;
+                document.getElementById("showtext").innerHTML = strUser;
+            }
+
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the register button, open the modal
+            btn.onclick = function () {
+                // turn the modal visiable
+                modal.style.display = "block";
+
+                let radios = document.getElementsByName("age");
+                for (var radio of radios) {
+                    if (radio.checked) {
+                        // var x = radio.value;
+                        if (radio.value == "underage") {
+                            document.getElementById("showtext2").innerHTML =
+                                "you are " + radio.value + " so i don't care about your intrest .";
+                                document.getElementById("showtext").innerHTML ="";
+                        }
+                        if(radio.value == "adult") 
+                        {
+                            document.getElementById("showtext2").innerHTML = "your " + radio.value + "person";
+                            //show what the user intersted about :
+                            var y = document.getElementById("showtext").textContent;
+                            document.getElementById("showtext").innerHTML = " and i see you like " + y;
+                        }
+
+                    }
+                }
+
+
+
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // // When the user clicks anywhere outside of the modal, close it
+            // window.onclick = function (event) {
+            //     if (event.target == modal) {
+            //         modal.style.display = "none";
+            //     }
+            // }
+        </script>
+        <!-- end of my inner js-->
 </body>
 
 </html>
